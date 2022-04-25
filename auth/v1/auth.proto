@@ -97,7 +97,7 @@ service AuthService {
 		};
 	}
 
-	rpc SessionIsStillValid(SessionIsStillValidRequest) returns (SessionIsStillValidResponse) {}
+	rpc SessionIsValid(SessionIsValidRequest) returns (SessionIsValidResponse) {}
 
 	rpc InvalidateAllSessions(InvalidateAllSessionsRequest) returns (InvalidateAllSessionsResponse) {
 		option (google.api.http) = {
@@ -249,10 +249,10 @@ message SignInResponse {
 message SignOutRequest {}
 message SignOutResponse {}
 
-message SessionIsStillValidRequest {
+message SessionIsValidRequest {
 	string session_id = 1;
 }
-message SessionIsStillValidResponse {
+message SessionIsValidResponse {
 	bool is_valid = 1;
 }
 
