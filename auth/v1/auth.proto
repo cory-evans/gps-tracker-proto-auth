@@ -207,7 +207,7 @@ message User {
 message UserSession {
 	string token = 1;
 	string refresh_token = 2;
-	int64 expires_at_utc = 3;
+	string expires_at = 3;
 	User user = 4;
 }
 
@@ -280,7 +280,7 @@ message CreateDeviceResponse {
 	string token = 1;
 	string refresh_token = 2;
 	Device device = 3;
-	int64 expires_at_utc = 4;
+	string expires_at = 4;
 }
 
 message GetDeviceRequest {
